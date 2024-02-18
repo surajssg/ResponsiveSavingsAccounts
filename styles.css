@@ -1,0 +1,75 @@
+body, h1, table {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    background-color: #008c85;
+    color: #e4efee;
+    padding: 20px;
+    text-align: center;
+}
+
+.desktop-view, .mobile-view {
+    display: none; /* Default state hidden */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #008c85;
+    color: #e4efee;
+}
+
+.mobile-view {
+    padding: 20px;
+}
+
+.mobile-navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mobile-navigation button {
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+
+@media (min-width: 600px) {
+    .desktop-view {
+        display: table; /* Show table in desktop view */
+    }
+}
+
+@media (max-width: 599px) {
+    .mobile-view {
+        display: block; /* Show mobile view for smaller devices */
+    }
+    .mobile-navigation {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.mobile-navigation {
+    display: none; /* Hide by default */
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 599px) {
+    .mobile-navigation {
+        display: flex; /* Show only in mobile view */
+        justify-content: space-between;
+    }
+}
